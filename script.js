@@ -75,7 +75,10 @@ function playGame() {
 				(humanChoice === "scissors" && computerChoice === "scissors")
 			) {
 				round = round + 1;
-				return console.log("Round tie!");
+				alert(`Round: ${round} 
+					Your choice: ${humanChoice} 
+					Computer choice: ${computerChoice} 
+					Round tie!`);
 			} else if (
 				(humanChoice === "rock" && computerChoice === "scissors") ||
 				(humanChoice === "paper" && computerChoice === "rock") ||
@@ -83,14 +86,20 @@ function playGame() {
 			) {
 				humanScore = humanScore + 1;
 				round = round + 1;
-				return console.log(
-					`Round win! ${humanChoice} beats ${computerChoice}.`
+				alert(
+					`Round: ${round} 
+					Round win! ${humanChoice} beats ${computerChoice}. 
+					Your score: ${humanScore} 
+					Computer score: ${computerScore}`
 				);
 			} else {
 				computerScore = computerScore + 1;
 				round = round + 1;
-				return console.log(
-					`Round lose! ${computerChoice} beats ${humanChoice}.`
+				alert(
+					`Round: ${round} 
+					Round lose! ${computerChoice} beats ${humanChoice}. 
+					Your score: ${humanScore} 
+					Computer score: ${computerScore}`
 				);
 			}
 		}
